@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de estudiantes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color:aliceblue
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        button{
+            cursor: pointer;
+            margin: 3px;
+        }
+
+        .aprobado{
+            color: green;
+            font-weight: bold;
+        }
+
+        .reprobado{
+            color: red;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <H1>Gestor de estudiantes</H1>
+
+    <H2>Lista de estudiantes</H2>
+
+    <button id="filtroTodos">Todos</button>
+    <button id="filtroAprobados">Aprobados</button>
+    <button id="filtroReprobados">Reprobados</button>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Nota</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+
+     <!-- TABLA JS-->
+        <tbody id="tablaEstudiantes"></tbody>
+
+    </table>
+
+    <!-- SECCIÓN PARA BUSCAR NUEVOS ESTUDIANTES-->
+
+    <H2>Buscar estudiante</H2>
+    
+    <input id="inputBusqueda" type="text" placeholder="Nombre">
+
+    <button id="btnBuscar">Buscar</button>
+
+    <div id="detalleEstudiante"></div>
+
+
+
+    <!--SECCIÓN PARA AGREGAR NUEVOS ESTUDIANTES -->
+
+     <H2>Agregar nuevo estudiantes</H2> 
+
+     <form id="formAgregar">
+
+     <input id="nuevoNombre" type="text" placeholder="Nombre">
+
+     <input id="nuevaNota" type="number" placeholder="Nota">
+
+     <button type="submit">Agregar</button>
+
+     </form>
+
+    <!--MENSAJE DE ERROR O ÉXITO -->
+
+     <p id="mensajeForm"></p>
+
+    <!--ENLACE A JS -->
+
+    <Script src="app.js"></Script>
+
+</body>
+</html>
